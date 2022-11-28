@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="-8qtwkkuozmaugp5dbwscx9ag1bhxdpb">
+  <files names="ActuatorState_TextGen.java:Application_TextGen.java:PitchActuator_TextGen.java:SensorComparisonTransaction_TextGen.java:State_TextGen.java:TextGenAspectDescriptor.java:Transaction_TextGen.java:TransitionDelay_TextGen.java" />
+</product>
+
