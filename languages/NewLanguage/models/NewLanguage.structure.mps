@@ -147,12 +147,18 @@
   <node concept="1TIwiD" id="6bflI$02COb">
     <property role="EcuMT" value="7120005094624103691" />
     <property role="TrG5h" value="Transaction" />
-    <ref role="1TJDcQ" node="6JwL40Xk22o" resolve="BaseTransaction" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyj" id="73XZ21rxeCd" role="1TKVEi">
       <property role="IQ2ns" value="8141940917260315149" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="condition" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="6bflI$02Daa" resolve="SensorComparisonTransaction" />
+    </node>
+    <node concept="1TJgyj" id="6JwL40XkiB2" role="1TKVEi">
+      <property role="IQ2ns" value="7120005094624104524" />
+      <property role="20kJfa" value="state" />
+      <ref role="20lvS9" node="6bflI$02_yq" resolve="State" />
     </node>
   </node>
   <node concept="1TIwiD" id="6bflI$02Daa">
@@ -235,7 +241,12 @@
     <ref role="1TJDcQ" node="6JwL40Xia3z" resolve="ActuatorState" />
     <node concept="1TJgyi" id="6JwL40Xjitb" role="1TKVEl">
       <property role="IQ2nx" value="7773428737026893643" />
-      <property role="TrG5h" value="pitch" />
+      <property role="TrG5h" value="note" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4jESuL3m5NA" role="1TKVEl">
+      <property role="IQ2nx" value="4966029943987789030" />
+      <property role="TrG5h" value="delay" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
@@ -261,6 +272,17 @@
       <property role="IQ2ns" value="7120005094624104524" />
       <property role="20kJfa" value="state" />
       <ref role="20lvS9" node="6bflI$02_yq" resolve="State" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4jESuL3m4GG">
+    <property role="EcuMT" value="4966029943987784492" />
+    <property role="TrG5h" value="Buzzer" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="4jESuL3m6Fm" role="1TKVEi">
+      <property role="IQ2ns" value="4966029943987792598" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="pitchs" />
+      <ref role="20lvS9" node="6JwL40XjfQI" resolve="PitchActuator" />
     </node>
   </node>
 </model>

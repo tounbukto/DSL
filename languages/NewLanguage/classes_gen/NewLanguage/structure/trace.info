@@ -20,7 +20,7 @@
       <unit at="10,0,48,0" name="NewLanguage.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="18,0,197,0" name="NewLanguage.structure.StructureAspectDescriptor" />
+      <unit at="18,0,196,0" name="NewLanguage.structure.StructureAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:905d0be1-fff1-42bb-bb18-49da0f1243fb(NewLanguage.structure)/7120005094623967193">
@@ -242,18 +242,17 @@
       <node id="7120005094624103691" at="71,45,72,36" concept="6" />
       <node id="7120005094624103691" at="177,69,178,157" concept="5" />
       <node id="7120005094624103691" at="178,157,179,34" concept="1" />
-      <node id="7120005094624103691" at="179,34,180,53" concept="7" />
-      <node id="7120005094624103691" at="180,53,181,76" concept="1" />
-      <node id="7120005094624103691" at="181,76,182,98" concept="1" />
-      <node id="7120005094624103691" at="182,98,183,17" concept="1" />
-      <node id="8141940917260315149" at="183,17,184,202" concept="1" />
-      <node id="7120005094624103691" at="184,202,185,22" concept="6" />
-      <node id="7120005094624103691" at="177,0,187,0" concept="9" trace="createDescriptorForTransaction#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="7120005094624103691" at="179,34,180,98" concept="1" />
+      <node id="7120005094624103691" at="180,98,181,17" concept="1" />
+      <node id="7773428737027156418" at="181,17,182,168" concept="1" />
+      <node id="8141940917260315149" at="182,168,183,201" concept="1" />
+      <node id="7120005094624103691" at="183,201,184,22" concept="6" />
+      <node id="7120005094624103691" at="177,0,186,0" concept="9" trace="createDescriptorForTransaction#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="7120005094624103691" at="71,45,72,36" />
-      <scope id="7120005094624103691" at="177,69,185,22">
+      <scope id="7120005094624103691" at="177,69,184,22">
         <var name="b" id="7120005094624103691" />
       </scope>
-      <scope id="7120005094624103691" at="177,0,187,0" />
+      <scope id="7120005094624103691" at="177,0,186,0" />
     </file>
   </root>
   <root nodeRef="r:905d0be1-fff1-42bb-bb18-49da0f1243fb(NewLanguage.structure)/7120005094624105098">
@@ -476,19 +475,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="7773428737027009702" at="29,0,30,0" concept="2" trace="myConceptTransitionDelay" />
       <node id="7773428737027009702" at="73,49,74,40" concept="6" />
-      <node id="7773428737027009702" at="187,73,188,161" concept="5" />
-      <node id="7773428737027009702" at="188,161,189,34" concept="1" />
-      <node id="7773428737027009702" at="189,34,190,98" concept="1" />
-      <node id="7773428737027009702" at="190,98,191,17" concept="1" />
-      <node id="7773428737027010641" at="191,17,192,112" concept="1" />
-      <node id="7773428737027012311" at="192,112,193,168" concept="1" />
-      <node id="7773428737027009702" at="193,168,194,22" concept="6" />
-      <node id="7773428737027009702" at="187,0,196,0" concept="9" trace="createDescriptorForTransitionDelay#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="7773428737027009702" at="186,73,187,161" concept="5" />
+      <node id="7773428737027009702" at="187,161,188,34" concept="1" />
+      <node id="7773428737027009702" at="188,34,189,98" concept="1" />
+      <node id="7773428737027009702" at="189,98,190,17" concept="1" />
+      <node id="7773428737027010641" at="190,17,191,112" concept="1" />
+      <node id="7773428737027012311" at="191,112,192,168" concept="1" />
+      <node id="7773428737027009702" at="192,168,193,22" concept="6" />
+      <node id="7773428737027009702" at="186,0,195,0" concept="9" trace="createDescriptorForTransitionDelay#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="7773428737027009702" at="73,49,74,40" />
-      <scope id="7773428737027009702" at="187,73,194,22">
+      <scope id="7773428737027009702" at="186,73,193,22">
         <var name="b" id="7773428737027009702" />
       </scope>
-      <scope id="7773428737027009702" at="187,0,196,0" />
+      <scope id="7773428737027009702" at="186,0,195,0" />
     </file>
   </root>
   <root nodeRef="r:905d0be1-fff1-42bb-bb18-49da0f1243fb(NewLanguage.structure)/7773428737027088536">

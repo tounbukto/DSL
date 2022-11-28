@@ -6,8 +6,10 @@ import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 
 public class TransitionDelay_TextGen extends TextGenDescriptorBase {
   @Override
@@ -16,9 +18,16 @@ public class TransitionDelay_TextGen extends TextGenDescriptorBase {
     tgs.append("delay(");
     tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.delay$$JP)));
     tgs.append(");");
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.state$g5Aj), PROPS.name$JdHN));
+    tgs.append("();\n");
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty delay$$JP = MetaAdapterFactory.getProperty(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x6be0c4403d4eeca6L, 0x6be0c4403d4ef051L, "delay");
+    /*package*/ static final SProperty name$JdHN = MetaAdapterFactory.getProperty(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a589aL, 0x62cf56e9000a58e9L, "name");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SReferenceLink state$g5Aj = MetaAdapterFactory.getReferenceLink(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x6be0c4403d4eeca6L, 0x6be0c4403d4ef6d7L, "state");
   }
 }

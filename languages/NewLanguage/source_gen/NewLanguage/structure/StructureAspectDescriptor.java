@@ -177,11 +177,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForTransaction() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("NewLanguage", "Transaction", 0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a8d0bL);
     b.class_(false, false, false);
-    // extends: NewLanguage.structure.BaseTransaction
-    b.super_(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x6be0c4403d502098L);
     b.origin("r:905d0be1-fff1-42bb-bb18-49da0f1243fb(NewLanguage.structure)/7120005094624103691");
     b.version(3);
-    b.aggregate("condition", 0x70fdfc205b84ea0dL).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a928aL).optional(true).ordered(true).multiple(false).origin("8141940917260315149").done();
+    b.associate("state", 0x62cf56e9000a904cL).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a589aL).optional(true).origin("7773428737027156418").done();
+    b.aggregate("condition", 0x70fdfc205b84ea0dL).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a928aL).optional(true).ordered(true).multiple(true).origin("8141940917260315149").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTransitionDelay() {

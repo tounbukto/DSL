@@ -45,74 +45,78 @@
   </registry>
   <node concept="1yLM4K" id="73XZ21rwqj5">
     <property role="1yLngs" value="LedClignotte" />
-    <node concept="1yLgTN" id="6JwL40XiD7B" role="1yLgsI">
-      <property role="1yLgS0" value="STATE1" />
+    <node concept="1yLgTN" id="6JwL40Xkzzq" role="1yLgsI">
       <property role="Fuh4W" value="true" />
-      <node concept="1mE6iz" id="6JwL40XiD7T" role="1mE5sj">
+      <property role="1yLgS0" value="STATE1" />
+      <node concept="1mE6iz" id="6JwL40Xkzzw" role="1mE5sj">
         <property role="1mE6me" value="LOW" />
         <ref role="1mE63e" node="73XZ21rwqjW" />
       </node>
-      <node concept="1mE6iz" id="6JwL40XiPna" role="1mE5sj">
+      <node concept="1mE6iz" id="6JwL40Xkzzy" role="1mE5sj">
         <property role="1mE6me" value="LOW" />
         <ref role="1mE63e" node="6JwL40XiDaT" />
       </node>
-      <node concept="1yLtJy" id="6JwL40XiD7P" role="Fuh_w">
-        <ref role="1yLsq_" node="6JwL40XiD7Z" />
-        <node concept="1yLshz" id="6JwL40XiD7R" role="FuhoH">
+      <node concept="1yLtJy" id="6JwL40Xkzzs" role="Fuh_w">
+        <ref role="1yLsq_" node="6JwL40Xkzz_" />
+        <node concept="1yLshz" id="6JwL40Xkzzu" role="FuhoH">
           <property role="1yLszQ" value="HIGH" />
           <ref role="1yLucQ" node="73XZ21rxDzZ" />
         </node>
+        <node concept="1yLshz" id="6JwL40XkZhR" role="FuhoH">
+          <property role="1yLszQ" value="HIGH" />
+          <ref role="1yLucQ" node="6JwL40XkZhU" />
+        </node>
       </node>
     </node>
-    <node concept="1yLgTN" id="6JwL40XiD7Z" role="1yLgsI">
+    <node concept="1yLgTN" id="6JwL40Xkzz_" role="1yLgsI">
       <property role="1yLgS0" value="STATE2" />
-      <node concept="1yLtJy" id="6JwL40XiD8h" role="Fuh_w">
-        <ref role="1yLsq_" node="6JwL40XiD8P" />
-        <node concept="1yLshz" id="6JwL40XiD8j" role="FuhoH">
+      <node concept="1mE6iz" id="6JwL40XkzzK" role="1mE5sj">
+        <property role="1mE6me" value="HIGH" />
+        <ref role="1mE63e" node="73XZ21rwqjW" />
+      </node>
+      <node concept="1mE6iz" id="6JwL40XkzzM" role="1mE5sj">
+        <property role="1mE6me" value="HIGH" />
+        <ref role="1mE63e" node="6JwL40XiDaT" />
+      </node>
+      <node concept="1yLtJy" id="6JwL40XkzzG" role="Fuh_w">
+        <ref role="1yLsq_" node="6JwL40XkzzP" />
+        <node concept="1yLshz" id="6JwL40XkzzI" role="FuhoH">
           <property role="1yLszQ" value="LOW" />
           <ref role="1yLucQ" node="73XZ21rxDzZ" />
         </node>
       </node>
-      <node concept="1mE6iz" id="6JwL40XiD8_" role="1mE5sj">
-        <property role="1mE6me" value="HIGH" />
-        <ref role="1mE63e" node="73XZ21rwqjW" />
-      </node>
-      <node concept="1mE6iz" id="6JwL40XiPn7" role="1mE5sj">
-        <property role="1mE6me" value="HIGH" />
-        <ref role="1mE63e" node="6JwL40XiDaT" />
-      </node>
     </node>
-    <node concept="1yLgTN" id="6JwL40XiD8P" role="1yLgsI">
+    <node concept="1yLgTN" id="6JwL40XkzzP" role="1yLgsI">
       <property role="1yLgS0" value="STATE3" />
-      <node concept="1mE6iz" id="6JwL40XiD99" role="1mE5sj">
-        <property role="1mE6me" value="HIGH" />
-        <ref role="1mE63e" node="73XZ21rwqjW" />
-      </node>
-      <node concept="1mE6iz" id="6JwL40XiPn4" role="1mE5sj">
-        <property role="1mE6me" value="HIGH" />
-        <ref role="1mE63e" node="6JwL40XiDaT" />
-      </node>
-      <node concept="1yLtJy" id="6JwL40XiD95" role="Fuh_w">
-        <ref role="1yLsq_" node="6JwL40XiD9q" />
-        <node concept="1yLshz" id="6JwL40XiD97" role="FuhoH">
+      <node concept="1yLtJy" id="6JwL40Xkz$1" role="Fuh_w">
+        <ref role="1yLsq_" node="6JwL40Xkz$G" />
+        <node concept="1yLshz" id="6JwL40Xkz$3" role="FuhoH">
           <property role="1yLszQ" value="HIGH" />
           <ref role="1yLucQ" node="73XZ21rxDzZ" />
         </node>
       </node>
+      <node concept="1mE6iz" id="6JwL40Xkz$x" role="1mE5sj">
+        <property role="1mE6me" value="HIGH" />
+        <ref role="1mE63e" node="73XZ21rwqjW" />
+      </node>
+      <node concept="1mE6iz" id="6JwL40Xkz$z" role="1mE5sj">
+        <property role="1mE6me" value="HIGH" />
+        <ref role="1mE63e" node="6JwL40XiDaT" />
+      </node>
     </node>
-    <node concept="1yLgTN" id="6JwL40XiD9q" role="1yLgsI">
+    <node concept="1yLgTN" id="6JwL40Xkz$G" role="1yLgsI">
       <property role="1yLgS0" value="STATE4" />
-      <node concept="1mE6iz" id="6JwL40XiD9J" role="1mE5sj">
+      <node concept="1mE6iz" id="6JwL40Xkz_1" role="1mE5sj">
         <property role="1mE6me" value="LOW" />
         <ref role="1mE63e" node="73XZ21rwqjW" />
       </node>
-      <node concept="1mE6iz" id="6JwL40XiPlT" role="1mE5sj">
+      <node concept="1mE6iz" id="6JwL40Xkz_3" role="1mE5sj">
         <property role="1mE6me" value="LOW" />
         <ref role="1mE63e" node="6JwL40XiDaT" />
       </node>
-      <node concept="1yLtJy" id="6JwL40XiD9F" role="Fuh_w">
-        <ref role="1yLsq_" node="6JwL40XiD7B" />
-        <node concept="1yLshz" id="6JwL40XiD9H" role="FuhoH">
+      <node concept="1yLtJy" id="6JwL40Xkz$X" role="Fuh_w">
+        <ref role="1yLsq_" node="6JwL40Xkzzq" />
+        <node concept="1yLshz" id="6JwL40Xkz$Z" role="FuhoH">
           <property role="1yLszQ" value="LOW" />
           <ref role="1yLucQ" node="73XZ21rxDzZ" />
         </node>
@@ -122,6 +126,11 @@
       <property role="1yLu_n" value="BUTTON1" />
       <property role="1yLnSI" value="1" />
       <property role="1yLpoh" value="12" />
+    </node>
+    <node concept="1yLn7y" id="6JwL40XkZhU" role="1yLkFn">
+      <property role="1yLu_n" value="BUTTON2" />
+      <property role="1yLnSI" value="1" />
+      <property role="1yLpoh" value="10" />
     </node>
     <node concept="1yLhWa" id="73XZ21rwqjW" role="1yLhiM">
       <property role="1yLu_n" value="LED" />

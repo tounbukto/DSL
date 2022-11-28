@@ -5,7 +5,10 @@ package NewLanguage.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.IVisitor;
+import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -17,7 +20,13 @@ public class Transaction_TextGen extends TextGenDescriptorBase {
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.append("if (");
-    tgs.appendNode(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.condition$4$3S));
+    tgs.appendNode(ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.condition$4$3S)).getElement(0));
+    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.condition$4$3S)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        tgs.append(" && ");
+        tgs.appendNode(it);
+      }
+    });
     tgs.append(") {\n");
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
