@@ -22,6 +22,7 @@
       </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
+        <property id="4628067390765956802" name="abstract" index="R5$K7" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
@@ -83,11 +84,6 @@
     <property role="TrG5h" value="Capteur" />
     <property role="EcuMT" value="7120005094624077579" />
     <ref role="1TJDcQ" node="6bflI$02FW7" resolve="Brick" />
-    <node concept="1TJgyi" id="6bflI$02yz7" role="1TKVEl">
-      <property role="IQ2nx" value="7120005094624078023" />
-      <property role="TrG5h" value="value" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
     <node concept="1TJgyi" id="6bflI$02yJJ" role="1TKVEl">
       <property role="IQ2nx" value="7120005094624078831" />
       <property role="TrG5h" value="type" />
@@ -111,11 +107,6 @@
     <property role="TrG5h" value="Actionneur" />
     <property role="EcuMT" value="7120005094624086499" />
     <ref role="1TJDcQ" node="6bflI$02FW7" resolve="Brick" />
-    <node concept="1TJgyi" id="6bflI$02$Dc" role="1TKVEl">
-      <property role="IQ2nx" value="7120005094624086604" />
-      <property role="TrG5h" value="value" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
   </node>
   <node concept="1TIwiD" id="6bflI$02_yq">
     <property role="TrG5h" value="State" />
@@ -134,31 +125,31 @@
       <property role="IQ2ns" value="8141940917260313920" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="transaction" />
-      <ref role="20lvS9" node="6bflI$02COb" resolve="Transaction" />
+      <ref role="20lvS9" node="7kofRWkMFu3" resolve="AbstractTransaction" />
     </node>
     <node concept="1TJgyj" id="6JwL40Xi9dj" role="1TKVEi">
       <property role="IQ2ns" value="7773428737026593619" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="actuatorState" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="6JwL40Xia3z" resolve="Actuatortate" />
+      <ref role="20lvS9" node="7kofRWkN_l0" resolve="AbstractAtuatorState" />
+    </node>
+    <node concept="1TJgyj" id="7kofRWkRuZz" role="1TKVEi">
+      <property role="IQ2ns" value="8437563716922109923" />
+      <property role="20kJfa" value="nextState" />
+      <ref role="20lvS9" node="6bflI$02_yq" resolve="State" />
     </node>
   </node>
   <node concept="1TIwiD" id="6bflI$02COb">
     <property role="EcuMT" value="7120005094624103691" />
     <property role="TrG5h" value="Transaction" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" node="7kofRWkMFu3" resolve="AbstractTransaction" />
     <node concept="1TJgyj" id="73XZ21rxeCd" role="1TKVEi">
       <property role="IQ2ns" value="8141940917260315149" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="condition" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="6bflI$02Daa" resolve="SensorComparisonTransaction" />
-    </node>
-    <node concept="1TJgyj" id="6JwL40XkiB2" role="1TKVEi">
-      <property role="IQ2ns" value="7120005094624104524" />
-      <property role="20kJfa" value="state" />
-      <ref role="20lvS9" node="6bflI$02_yq" resolve="State" />
     </node>
   </node>
   <node concept="1TIwiD" id="6bflI$02Daa">
@@ -223,6 +214,7 @@
   <node concept="1TIwiD" id="6JwL40Xia3z">
     <property role="TrG5h" value="ActuatorState" />
     <property role="EcuMT" value="7773428737026597091" />
+    <ref role="1TJDcQ" node="7kofRWkN_l0" resolve="AbstractAtuatorState" />
     <node concept="1TJgyi" id="6JwL40Xia7e" role="1TKVEl">
       <property role="IQ2nx" value="7773428737026597326" />
       <property role="TrG5h" value="currentState" />
@@ -235,33 +227,14 @@
       <ref role="20lvS9" node="6bflI$02$Bz" resolve="Actionneur" />
     </node>
   </node>
-  <node concept="1TIwiD" id="6JwL40XjfQI">
-    <property role="EcuMT" value="7773428737026882990" />
-    <property role="TrG5h" value="PitchActuator" />
-    <ref role="1TJDcQ" node="6JwL40Xia3z" resolve="ActuatorState" />
-    <node concept="1TJgyi" id="6JwL40Xjitb" role="1TKVEl">
-      <property role="IQ2nx" value="7773428737026893643" />
-      <property role="TrG5h" value="note" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyi" id="4jESuL3m5NA" role="1TKVEl">
-      <property role="IQ2nx" value="4966029943987789030" />
-      <property role="TrG5h" value="delay" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="6JwL40XjIMA">
     <property role="EcuMT" value="7773428737027009702" />
     <property role="TrG5h" value="TransitionDelay" />
+    <ref role="1TJDcQ" node="7kofRWkMFu3" resolve="AbstractTransaction" />
     <node concept="1TJgyi" id="6JwL40XjJ1h" role="1TKVEl">
       <property role="IQ2nx" value="7773428737027010641" />
       <property role="TrG5h" value="delay" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyj" id="6JwL40XjJrn" role="1TKVEi">
-      <property role="IQ2ns" value="7773428737027012311" />
-      <property role="20kJfa" value="state" />
-      <ref role="20lvS9" node="6bflI$02_yq" resolve="State" />
     </node>
   </node>
   <node concept="1TIwiD" id="6JwL40Xk22o">
@@ -274,15 +247,36 @@
       <ref role="20lvS9" node="6bflI$02_yq" resolve="State" />
     </node>
   </node>
-  <node concept="1TIwiD" id="4jESuL3m4GG">
-    <property role="EcuMT" value="4966029943987784492" />
-    <property role="TrG5h" value="Buzzer" />
+  <node concept="1TIwiD" id="7kofRWkMFu3">
+    <property role="EcuMT" value="8437563716920850307" />
+    <property role="TrG5h" value="AbstractTransaction" />
+    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
-    <node concept="1TJgyj" id="4jESuL3m6Fm" role="1TKVEi">
-      <property role="IQ2ns" value="4966029943987792598" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="pitchs" />
-      <ref role="20lvS9" node="6JwL40XjfQI" resolve="PitchActuator" />
+    <node concept="1TJgyj" id="7kofRWkQKu9" role="1TKVEi">
+      <property role="IQ2ns" value="8437563716921919369" />
+      <property role="20kJfa" value="state" />
+      <ref role="20lvS9" node="6bflI$02_yq" resolve="State" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7kofRWkN_l0">
+    <property role="EcuMT" value="8437563716921087296" />
+    <property role="TrG5h" value="AbstractAtuatorState" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+  </node>
+  <node concept="1TIwiD" id="7kofRWkN_Hq">
+    <property role="EcuMT" value="8437563716921088858" />
+    <property role="TrG5h" value="BuzzerTone" />
+    <ref role="1TJDcQ" node="7kofRWkN_l0" resolve="AbstractAtuatorState" />
+    <node concept="1TJgyi" id="7kofRWkN_Qo" role="1TKVEl">
+      <property role="IQ2nx" value="8437563716921089432" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="7kofRWkN_Vj" role="1TKVEi">
+      <property role="IQ2ns" value="8437563716921089747" />
+      <property role="20kJfa" value="actuator" />
+      <ref role="20lvS9" node="6bflI$02$Bz" resolve="Actionneur" />
     </node>
   </node>
 </model>

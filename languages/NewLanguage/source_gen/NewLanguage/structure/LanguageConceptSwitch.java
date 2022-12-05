@@ -9,27 +9,31 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int Actionneur = 0;
-  public static final int ActuatorState = 1;
-  public static final int Application = 2;
-  public static final int BaseTransaction = 3;
-  public static final int Brick = 4;
-  public static final int Capteur = 5;
-  public static final int PitchActuator = 6;
-  public static final int SensorComparisonTransaction = 7;
-  public static final int State = 8;
-  public static final int Transaction = 9;
-  public static final int TransitionDelay = 10;
+  public static final int AbstractAtuatorState = 0;
+  public static final int AbstractTransaction = 1;
+  public static final int Actionneur = 2;
+  public static final int ActuatorState = 3;
+  public static final int Application = 4;
+  public static final int BaseTransaction = 5;
+  public static final int Brick = 6;
+  public static final int BuzzerTone = 7;
+  public static final int Capteur = 8;
+  public static final int SensorComparisonTransaction = 9;
+  public static final int State = 10;
+  public static final int Transaction = 11;
+  public static final int TransitionDelay = 12;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL);
+    builder.put(0x75183f7f14ce5540L, AbstractAtuatorState);
+    builder.put(0x75183f7f14cab783L, AbstractTransaction);
     builder.put(0x62cf56e9000a49e3L, Actionneur);
     builder.put(0x6be0c4403d48a0e3L, ActuatorState);
     builder.put(0x62cf56e9000877d9L, Application);
     builder.put(0x6be0c4403d502098L, BaseTransaction);
     builder.put(0x62cf56e9000abf07L, Brick);
+    builder.put(0x75183f7f14ce5b5aL, BuzzerTone);
     builder.put(0x62cf56e9000a270bL, Capteur);
-    builder.put(0x6be0c4403d4cfdaeL, PitchActuator);
     builder.put(0x62cf56e9000a928aL, SensorComparisonTransaction);
     builder.put(0x62cf56e9000a589aL, State);
     builder.put(0x62cf56e9000a8d0bL, Transaction);

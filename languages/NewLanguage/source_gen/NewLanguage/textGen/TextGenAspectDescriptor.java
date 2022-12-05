@@ -29,8 +29,8 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new ActuatorState_TextGen();
       case LanguageConceptSwitch.Application:
         return new Application_TextGen();
-      case LanguageConceptSwitch.PitchActuator:
-        return new PitchActuator_TextGen();
+      case LanguageConceptSwitch.BuzzerTone:
+        return new BuzzerTone_TextGen();
       case LanguageConceptSwitch.SensorComparisonTransaction:
         return new SensorComparisonTransaction_TextGen();
       case LanguageConceptSwitch.State:

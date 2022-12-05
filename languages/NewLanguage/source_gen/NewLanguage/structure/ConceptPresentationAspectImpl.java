@@ -9,13 +9,15 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private ConceptPresentation props_AbstractAtuatorState;
+  private ConceptPresentation props_AbstractTransaction;
   private ConceptPresentation props_Actionneur;
   private ConceptPresentation props_ActuatorState;
   private ConceptPresentation props_Application;
   private ConceptPresentation props_BaseTransaction;
   private ConceptPresentation props_Brick;
+  private ConceptPresentation props_BuzzerTone;
   private ConceptPresentation props_Capteur;
-  private ConceptPresentation props_PitchActuator;
   private ConceptPresentation props_SensorComparisonTransaction;
   private ConceptPresentation props_State;
   private ConceptPresentation props_Transaction;
@@ -26,6 +28,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.AbstractAtuatorState:
+        if (props_AbstractAtuatorState == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_AbstractAtuatorState = cpb.create();
+        }
+        return props_AbstractAtuatorState;
+      case LanguageConceptSwitch.AbstractTransaction:
+        if (props_AbstractTransaction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_AbstractTransaction = cpb.create();
+        }
+        return props_AbstractTransaction;
       case LanguageConceptSwitch.Actionneur:
         if (props_Actionneur == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -61,6 +75,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Brick = cpb.create();
         }
         return props_Brick;
+      case LanguageConceptSwitch.BuzzerTone:
+        if (props_BuzzerTone == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("BuzzerTone");
+          props_BuzzerTone = cpb.create();
+        }
+        return props_BuzzerTone;
       case LanguageConceptSwitch.Capteur:
         if (props_Capteur == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -68,13 +89,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Capteur = cpb.create();
         }
         return props_Capteur;
-      case LanguageConceptSwitch.PitchActuator:
-        if (props_PitchActuator == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x6be0c4403d48a0e3L, 0x6be0c4403d48a48eL, "actuator", "", "");
-          props_PitchActuator = cpb.create();
-        }
-        return props_PitchActuator;
       case LanguageConceptSwitch.SensorComparisonTransaction:
         if (props_SensorComparisonTransaction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

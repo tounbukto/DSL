@@ -9,11 +9,8 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
-import org.jetbrains.mps.openapi.language.SProperty;
 
 public class Transaction_TextGen extends TextGenDescriptorBase {
   @Override
@@ -35,17 +32,10 @@ public class Transaction_TextGen extends TextGenDescriptorBase {
     tgs.indent();
     tgs.append("}\n");
     tgs.indent();
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.state$aPxp), PROPS.name$JdHN));
-    tgs.append("();\n");
 
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink condition$4$3S = MetaAdapterFactory.getContainmentLink(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a8d0bL, 0x70fdfc205b84ea0dL, "condition");
-    /*package*/ static final SReferenceLink state$aPxp = MetaAdapterFactory.getReferenceLink(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a8d0bL, 0x62cf56e9000a904cL, "state");
-  }
-
-  private static final class PROPS {
-    /*package*/ static final SProperty name$JdHN = MetaAdapterFactory.getProperty(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a589aL, 0x62cf56e9000a58e9L, "name");
   }
 }
