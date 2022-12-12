@@ -1066,7 +1066,7 @@
   </node>
   <node concept="WtQ9Q" id="23vinNFoWhj">
     <property role="3GE5qa" value="transition" />
-    <ref role="WuzLi" to="wkfv:QyYUbdPuB" resolve="SensorHighLowAction" />
+    <ref role="WuzLi" to="wkfv:QyYUbdPuB" resolve="ActuatorHighLowAction" />
     <node concept="11bSqf" id="23vinNFoWB$" role="11c4hB">
       <node concept="3clFbS" id="23vinNFoWB_" role="2VODD2">
         <node concept="lc7rE" id="23vinNFoWBA" role="3cqZAp">
@@ -1077,24 +1077,24 @@
             <node concept="2YIFZM" id="23vinNFoWBD" role="lb14g">
               <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
               <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-              <node concept="2OqwBi" id="23vinNFoZHE" role="37wK5m">
-                <node concept="2OqwBi" id="23vinNFoZ0Q" role="2Oq$k0">
-                  <node concept="2OqwBi" id="23vinNFoYua" role="2Oq$k0">
+              <node concept="2OqwBi" id="23vinNFswyk" role="37wK5m">
+                <node concept="2OqwBi" id="23vinNFsw1Q" role="2Oq$k0">
+                  <node concept="2OqwBi" id="23vinNFsvIp" role="2Oq$k0">
                     <node concept="2OqwBi" id="23vinNFoY8C" role="2Oq$k0">
                       <node concept="117lpO" id="23vinNFoWBE" role="2Oq$k0" />
                       <node concept="3TrEf2" id="23vinNFoYhe" role="2OqNvi">
-                        <ref role="3Tt5mk" to="wkfv:1nrhOXoyBCV" resolve="sensor" />
+                        <ref role="3Tt5mk" to="wkfv:1nrhOXoyBCV" resolve="actuator" />
                       </node>
                     </node>
-                    <node concept="3TrEf2" id="23vinNFoYCA" role="2OqNvi">
-                      <ref role="3Tt5mk" to="wkfv:QyYUbgM4q" resolve="target" />
+                    <node concept="3TrEf2" id="23vinNFsvMR" role="2OqNvi">
+                      <ref role="3Tt5mk" to="wkfv:2mkDJ8VR8SA" resolve="actuator" />
                     </node>
                   </node>
-                  <node concept="3TrEf2" id="23vinNFoZsm" role="2OqNvi">
-                    <ref role="3Tt5mk" to="wkfv:QyYUbgLzd" resolve="sensor" />
+                  <node concept="3TrEf2" id="23vinNFswgA" role="2OqNvi">
+                    <ref role="3Tt5mk" to="wkfv:QyYUbahmp" resolve="actuator" />
                   </node>
                 </node>
-                <node concept="3TrcHB" id="23vinNFoZVK" role="2OqNvi">
+                <node concept="3TrcHB" id="23vinNFswMm" role="2OqNvi">
                   <ref role="3TsBF5" to="wkfv:6bflI$02G3S" resolve="broche" />
                 </node>
               </node>
@@ -1169,6 +1169,64 @@
                 </node>
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="23vinNFsxPf">
+    <property role="3GE5qa" value="transition" />
+    <ref role="WuzLi" to="wkfv:23vinNFrupp" resolve="BuzzerAction" />
+    <node concept="11bSqf" id="23vinNFsxUV" role="11c4hB">
+      <node concept="3clFbS" id="23vinNFsxUW" role="2VODD2">
+        <node concept="lc7rE" id="23vinNFszLp" role="3cqZAp">
+          <node concept="la8eA" id="23vinNFszLq" role="lcghm">
+            <property role="lacIc" value="tone(" />
+          </node>
+          <node concept="l9hG8" id="23vinNFszLr" role="lcghm">
+            <node concept="2YIFZM" id="23vinNFszLs" role="lb14g">
+              <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
+              <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+              <node concept="2OqwBi" id="23vinNFsCYr" role="37wK5m">
+                <node concept="2OqwBi" id="23vinNFsCsV" role="2Oq$k0">
+                  <node concept="2OqwBi" id="23vinNFsBWN" role="2Oq$k0">
+                    <node concept="2OqwBi" id="23vinNFsBuF" role="2Oq$k0">
+                      <node concept="117lpO" id="23vinNFszLx" role="2Oq$k0" />
+                      <node concept="3TrEf2" id="23vinNFsBzh" role="2OqNvi">
+                        <ref role="3Tt5mk" to="wkfv:23vinNFsAH0" resolve="buzzer" />
+                      </node>
+                    </node>
+                    <node concept="3TrEf2" id="23vinNFsCbz" role="2OqNvi">
+                      <ref role="3Tt5mk" to="wkfv:2mkDJ8VR8SA" resolve="actuator" />
+                    </node>
+                  </node>
+                  <node concept="3TrEf2" id="23vinNFsCFJ" role="2OqNvi">
+                    <ref role="3Tt5mk" to="wkfv:QyYUbahmp" resolve="actuator" />
+                  </node>
+                </node>
+                <node concept="3TrcHB" id="23vinNFsDf1" role="2OqNvi">
+                  <ref role="3TsBF5" to="wkfv:6bflI$02G3S" resolve="broche" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="23vinNFszLA" role="lcghm">
+            <property role="lacIc" value=", " />
+          </node>
+          <node concept="l9hG8" id="23vinNFszLB" role="lcghm">
+            <node concept="2YIFZM" id="23vinNFszLC" role="lb14g">
+              <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
+              <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+              <node concept="2OqwBi" id="23vinNFsEt3" role="37wK5m">
+                <node concept="117lpO" id="23vinNFszLE" role="2Oq$k0" />
+                <node concept="3TrcHB" id="23vinNFsExU" role="2OqNvi">
+                  <ref role="3TsBF5" to="wkfv:23vinNFruD4" resolve="note" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="23vinNFsFKX" role="lcghm">
+            <property role="lacIc" value=", 200)" />
           </node>
         </node>
       </node>

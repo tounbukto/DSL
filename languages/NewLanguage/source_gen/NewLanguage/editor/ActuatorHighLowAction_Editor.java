@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class SensorHighLowAction_Editor extends DefaultNodeEditor {
+public class ActuatorHighLowAction_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new SensorHighLowAction_EditorBuilder_a(editorContext, node).createCell();
+    return new ActuatorHighLowAction_EditorBuilder_a(editorContext, node).createCell();
   }
 }

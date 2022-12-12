@@ -27,16 +27,18 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
     switch (myIndex.index(concept)) {
       case LanguageConceptSwitch.ActionDelay:
         return new ActionDelay_TextGen();
+      case LanguageConceptSwitch.ActuatorHighLowAction:
+        return new ActuatorHighLowAction_TextGen();
       case LanguageConceptSwitch.ActuatorReference:
         return new ActuatorReference_TextGen();
       case LanguageConceptSwitch.ActuatorState:
         return new ActuatorState_TextGen();
       case LanguageConceptSwitch.Application:
         return new Application_TextGen();
+      case LanguageConceptSwitch.BuzzerAction:
+        return new BuzzerAction_TextGen();
       case LanguageConceptSwitch.SensorComparison:
         return new SensorComparison_TextGen();
-      case LanguageConceptSwitch.SensorHighLowAction:
-        return new SensorHighLowAction_TextGen();
       case LanguageConceptSwitch.SensorHighLowComparison:
         return new SensorHighLowComparison_TextGen();
       case LanguageConceptSwitch.StateDeclaration:

@@ -360,11 +360,8 @@
           </node>
         </node>
       </node>
-      <node concept="3F0ifn" id="L1htGZlYzj" role="3EZMnx">
-        <property role="3F0ifm" value="IS" />
-      </node>
-      <node concept="3F0A7n" id="L1htGZlYcr" role="3EZMnx">
-        <ref role="1NtTu8" to="wkfv:D0BVBe69HB" resolve="value" />
+      <node concept="3F1sOY" id="23vinNFtEI1" role="3EZMnx">
+        <ref role="1NtTu8" to="wkfv:23vinNFtEac" resolve="action" />
       </node>
     </node>
   </node>
@@ -433,14 +430,11 @@
   </node>
   <node concept="24kQdi" id="QyYUbfMIF">
     <property role="3GE5qa" value="transition" />
-    <ref role="1XX52x" to="wkfv:QyYUbdPuB" resolve="SensorHighLowAction" />
+    <ref role="1XX52x" to="wkfv:QyYUbdPuB" resolve="ActuatorHighLowAction" />
     <node concept="3EZMnI" id="QyYUbfMIH" role="2wV5jI">
       <node concept="l2Vlx" id="QyYUbfMII" role="2iSdaV" />
-      <node concept="3F1sOY" id="1nrhOXoyChP" role="3EZMnx">
-        <ref role="1NtTu8" to="wkfv:1nrhOXoyBCV" resolve="sensor" />
-      </node>
       <node concept="3F0ifn" id="QyYUbfMIR" role="3EZMnx">
-        <property role="3F0ifm" value=" IS " />
+        <property role="3F0ifm" value=" = " />
         <node concept="11L4FC" id="QyYUbfMIS" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -520,6 +514,19 @@
       </node>
       <node concept="3F0A7n" id="23vinNFq65V" role="3EZMnx">
         <ref role="1NtTu8" to="wkfv:23vinNFq5sj" resolve="value" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="23vinNFrECP">
+    <property role="3GE5qa" value="transition" />
+    <ref role="1XX52x" to="wkfv:23vinNFrupp" resolve="BuzzerAction" />
+    <node concept="3EZMnI" id="23vinNFrEF9" role="2wV5jI">
+      <node concept="l2Vlx" id="23vinNFrEFa" role="2iSdaV" />
+      <node concept="3F0ifn" id="23vinNFrEFg" role="3EZMnx">
+        <property role="3F0ifm" value="NOTE" />
+      </node>
+      <node concept="3F0A7n" id="23vinNFrEFj" role="3EZMnx">
+        <ref role="1NtTu8" to="wkfv:23vinNFruD4" resolve="note" />
       </node>
     </node>
   </node>

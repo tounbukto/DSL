@@ -18,17 +18,19 @@ import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptAction = createDescriptorForAction();
   /*package*/ final ConceptDescriptor myConceptActionDelay = createDescriptorForActionDelay();
   /*package*/ final ConceptDescriptor myConceptActuator = createDescriptorForActuator();
   /*package*/ final ConceptDescriptor myConceptActuatorDeclaration = createDescriptorForActuatorDeclaration();
+  /*package*/ final ConceptDescriptor myConceptActuatorHighLowAction = createDescriptorForActuatorHighLowAction();
   /*package*/ final ConceptDescriptor myConceptActuatorReference = createDescriptorForActuatorReference();
   /*package*/ final ConceptDescriptor myConceptActuatorState = createDescriptorForActuatorState();
   /*package*/ final ConceptDescriptor myConceptApplication = createDescriptorForApplication();
   /*package*/ final ConceptDescriptor myConceptBrick = createDescriptorForBrick();
+  /*package*/ final ConceptDescriptor myConceptBuzzerAction = createDescriptorForBuzzerAction();
   /*package*/ final ConceptDescriptor myConceptSensor = createDescriptorForSensor();
   /*package*/ final ConceptDescriptor myConceptSensorComparison = createDescriptorForSensorComparison();
   /*package*/ final ConceptDescriptor myConceptSensorDeclaration = createDescriptorForSensorDeclaration();
-  /*package*/ final ConceptDescriptor myConceptSensorHighLowAction = createDescriptorForSensorHighLowAction();
   /*package*/ final ConceptDescriptor myConceptSensorHighLowComparison = createDescriptorForSensorHighLowComparison();
   /*package*/ final ConceptDescriptor myConceptSensorReference = createDescriptorForSensorReference();
   /*package*/ final ConceptDescriptor myConceptState = createDescriptorForState();
@@ -53,19 +55,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActionDelay, myConceptActuator, myConceptActuatorDeclaration, myConceptActuatorReference, myConceptActuatorState, myConceptApplication, myConceptBrick, myConceptSensor, myConceptSensorComparison, myConceptSensorDeclaration, myConceptSensorHighLowAction, myConceptSensorHighLowComparison, myConceptSensorReference, myConceptState, myConceptStateDeclaration, myConceptStateReference, myConceptTransition);
+    return Arrays.asList(myConceptAction, myConceptActionDelay, myConceptActuator, myConceptActuatorDeclaration, myConceptActuatorHighLowAction, myConceptActuatorReference, myConceptActuatorState, myConceptApplication, myConceptBrick, myConceptBuzzerAction, myConceptSensor, myConceptSensorComparison, myConceptSensorDeclaration, myConceptSensorHighLowComparison, myConceptSensorReference, myConceptState, myConceptStateDeclaration, myConceptStateReference, myConceptTransition);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.Action:
+        return myConceptAction;
       case LanguageConceptSwitch.ActionDelay:
         return myConceptActionDelay;
       case LanguageConceptSwitch.Actuator:
         return myConceptActuator;
       case LanguageConceptSwitch.ActuatorDeclaration:
         return myConceptActuatorDeclaration;
+      case LanguageConceptSwitch.ActuatorHighLowAction:
+        return myConceptActuatorHighLowAction;
       case LanguageConceptSwitch.ActuatorReference:
         return myConceptActuatorReference;
       case LanguageConceptSwitch.ActuatorState:
@@ -74,14 +80,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptApplication;
       case LanguageConceptSwitch.Brick:
         return myConceptBrick;
+      case LanguageConceptSwitch.BuzzerAction:
+        return myConceptBuzzerAction;
       case LanguageConceptSwitch.Sensor:
         return myConceptSensor;
       case LanguageConceptSwitch.SensorComparison:
         return myConceptSensorComparison;
       case LanguageConceptSwitch.SensorDeclaration:
         return myConceptSensorDeclaration;
-      case LanguageConceptSwitch.SensorHighLowAction:
-        return myConceptSensorHighLowAction;
       case LanguageConceptSwitch.SensorHighLowComparison:
         return myConceptSensorHighLowComparison;
       case LanguageConceptSwitch.SensorReference:
@@ -108,6 +114,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("NewLanguage", "Action", 0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x20df497ceb6de0e7L);
+    b.class_(false, true, false);
+    b.origin("r:905d0be1-fff1-42bb-bb18-49da0f1243fb(NewLanguage.structure)/2368692729894789351");
+    b.version(3);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForActionDelay() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("NewLanguage", "ActionDelay", 0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x6be0c4403d4eeca6L);
     b.class_(false, false, false);
@@ -134,6 +147,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("actuator", 0x368bee8b291599L).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a49e3L).optional(false).ordered(true).multiple(false).origin("15353505395578265").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForActuatorHighLowAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("NewLanguage", "ActuatorHighLowAction", 0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x368bee8b3757a7L);
+    b.class_(false, false, false);
+    // extends: NewLanguage.structure.Action
+    b.super_(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x20df497ceb6de0e7L);
+    b.origin("r:905d0be1-fff1-42bb-bb18-49da0f1243fb(NewLanguage.structure)/15353505396512679");
+    b.version(3);
+    b.property("value", 0x368bee8b3757a8L).type(MetaIdFactory.dataTypeId(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0xa409fb9ce2a54d3L)).origin("15353505396512680").done();
+    b.aggregate("actuator", 0x15db474f588a7a3bL).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdc8e25L).optional(false).ordered(true).multiple(false).origin("1574930900809579067").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForActuatorReference() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("NewLanguage", "ActuatorReference", 0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdc8e25L);
     b.class_(false, false, false);
@@ -141,6 +165,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(3);
     b.property("value", 0xa409fb9ce189b67L).type(MetaIdFactory.dataTypeId(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0xa409fb9ce2a54d3L)).origin("738765959264246631").done();
     b.associate("actuator", 0x2594a6f23bdc8e26L).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdeef5dL).optional(false).origin("2707972835273117222").done();
+    b.aggregate("action", 0x20df497ceb76a28cL).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x20df497ceb6de0e7L).optional(false).ordered(true).multiple(false).origin("2368692729895363212").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForActuatorState() {
@@ -173,6 +198,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("broche", 0x62cf56e9000ac0f8L).type(PrimitiveTypeId.INTEGER).origin("7120005094624116984").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForBuzzerAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("NewLanguage", "BuzzerAction", 0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x20df497ceb6de659L);
+    b.class_(false, false, false);
+    // extends: NewLanguage.structure.Action
+    b.super_(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x20df497ceb6de0e7L);
+    b.origin("r:905d0be1-fff1-42bb-bb18-49da0f1243fb(NewLanguage.structure)/2368692729894790745");
+    b.version(3);
+    b.property("note", 0x20df497ceb6dea44L).type(PrimitiveTypeId.INTEGER).origin("2368692729894791748").done();
+    b.aggregate("buzzer", 0x20df497ceb726b40L).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdc8e25L).optional(false).ordered(true).multiple(false).origin("2368692729895086912").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForSensor() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("NewLanguage", "Sensor", 0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a270bL);
     b.class_(false, false, false);
@@ -201,15 +237,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("sensor", 0x368bee8b4318cdL).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a270bL).optional(false).ordered(true).multiple(false).origin("15353505397283021").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForSensorHighLowAction() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("NewLanguage", "SensorHighLowAction", 0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x368bee8b3757a7L);
-    b.class_(false, false, false);
-    b.origin("r:905d0be1-fff1-42bb-bb18-49da0f1243fb(NewLanguage.structure)/15353505396512679");
-    b.version(3);
-    b.property("value", 0x368bee8b3757a8L).type(MetaIdFactory.dataTypeId(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0xa409fb9ce2a54d3L)).origin("15353505396512680").done();
-    b.aggregate("sensor", 0x15db474f588a7a3bL).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x368bee8b431c14L).optional(false).ordered(true).multiple(false).origin("1574930900809579067").done();
-    return b.create();
-  }
   private static ConceptDescriptor createDescriptorForSensorHighLowComparison() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("NewLanguage", "SensorHighLowComparison", 0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x20df497ceb685336L);
     b.class_(false, false, false);
@@ -232,7 +259,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:905d0be1-fff1-42bb-bb18-49da0f1243fb(NewLanguage.structure)/7120005094624090266");
     b.version(3);
-    b.property("initial", 0x70fdfc205b84ed1cL).type(PrimitiveTypeId.BOOLEAN).origin("8141940917260315932").done();
     b.aggregate("actuatorState", 0x6be0c4403d489353L).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdc8e25L).optional(false).ordered(true).multiple(true).origin("7773428737026593619").done();
     b.aggregate("transitions", 0x1bb77b4bf434b1cfL).target(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0xa409fb9ce363d99L).optional(true).ordered(true).multiple(true).origin("1997200525911962063").done();
     return b.create();
