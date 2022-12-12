@@ -3,6 +3,7 @@ package dsl
 import kernel.Action
 import kernel.Block
 import kernel.Counter
+import kernel.Delay
 import kernel.EventBlock
 import kernel.Creator
 import kernel.Mode
@@ -54,6 +55,14 @@ class ArduinoModel {
 
         eventBlocks[-1].pushAction(new Action(varName,state))
     }
+
+    void createAfterBlock(String time, String name, String state){
+        String varName = this.modes.stream().anyMatch((m) -> m.name == name) ? name+"=" : "digitalWrite(${name},"
+        eventBlocks[-1].pushAction(new Delay(time))
+        eventBlocks[-1].pushAction(new Action(varName, state))
+
+    }
+
     void createState(creatorName,state,operator){
         String varName = this.creators.stream().anyMatch(c -> c.name == creatorName && c instanceof Creator) ? "digitalRead(${creatorName})" : creatorName
         eventBlocks[-1].pushState(new State(varName,state,operator))

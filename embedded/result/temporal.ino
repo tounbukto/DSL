@@ -13,13 +13,9 @@ void setup(){
 
 void loop(){
 	if(digitalRead(btn) == push){
-		digitalWrite(led, HIGH);
-		digitalWrite(buzzer, HIGH);
-	}
-
-	if(digitalRead(btn) == release){
-		digitalWrite(led, LOW);
-		digitalWrite(buzzer, LOW);
+		digitalWrite(led, HIGH);	
+		delay(800);	
+		digitalWrite(led, LOW);	
 	}
 
 }

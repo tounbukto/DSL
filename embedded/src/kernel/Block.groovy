@@ -25,7 +25,7 @@ class Block implements Instantiater {
 
     @Override
     String instantiate() {
-        return "void ${this.blockName}(){" +"${creators.inject "",{old,curr->  old +"\n"+curr.instantiate()}}"+
-                "${eventBlocks.inject "",{old,curr-> old +"\n"+curr.instantiate()}}\n}\n"
+        return "void ${this.blockName}(){" +"${creators.inject "",{old,curr->  "\n"+curr.instantiate()+old}}"+
+                "${eventBlocks.inject "",{old,curr-> "\n"+curr.instantiate()+ old}}\n}\n"
     }
 }

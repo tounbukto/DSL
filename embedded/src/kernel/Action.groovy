@@ -1,6 +1,6 @@
 package kernel
 
-class Action implements Instantiater {
+class Action extends Instruction implements Instantiater {
 
     String state
     String creator

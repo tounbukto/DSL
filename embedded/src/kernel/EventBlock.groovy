@@ -4,7 +4,7 @@ package kernel
 class EventBlock implements Instantiater {
 
 
-    ArrayList<Action> actions
+    ArrayList<Instruction> actions
     ArrayList<State> states
 
     ArrayList<String> stateConnectors
@@ -15,7 +15,7 @@ class EventBlock implements Instantiater {
         stateConnectors = new ArrayList<>()
     }
 
-    void pushAction(Action action){
+    void pushAction(Instruction action){
         this.actions.push(action)
     }
 
@@ -39,7 +39,7 @@ class EventBlock implements Instantiater {
 //        "if(${states.inject "",{old,curr -> old +" "+ curr.instantiate()}}){\n" +
 //            "" +
 //                    "}"
-       return "\tif(${stateString}){${actions.inject "",{old,curr -> old +"\n\t" +curr.instantiate()}}\n\t}\n"
+        return "\tif(${stateString}){${actions.inject "",{old,curr -> "\n\t"+curr.instantiate()+"\t"+old  }}\n\t}\n"
 
     }
 

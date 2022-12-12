@@ -17,14 +17,15 @@ abstract class SyntaxScript extends Script {
     def on(str) {
         def closure
         def closureSet
+        def closureAfter
         this.model.createBlock()
         def evaluation = { name, state, operator ->
             {
                 //  println(name+ ""+ state+""+ operator)
                 this.model.createState(name, (String) state, operator)
                 [
-                        set: closureSet,
-                        and: { a ->
+                        set  : closureSet,
+                        and  : { a ->
                             this.model.pushStateConnector("&&")
                             closure(a)
                         }
@@ -32,20 +33,30 @@ abstract class SyntaxScript extends Script {
             }
         }
 
-
         closureSet = { outName ->
             [
                     to: { outState ->
                         {
-                            this.model.createAction((String)outName, (String) outState)
+                            this.model.createAction((String) outName, (String) outState)
                             [
                                     and: closureSet
                             ]
                         }
                     },
-                    after : { number -> [set:closureSet]
 
+                    after : { number ->
+                        [
+                                set: { x ->
+                                    [to:
+                                             { value ->
+                                                 this.model.createAfterBlock((String) number, (String) x, (String) value)
+                                             }
+                                    ]
+
+                                }
+                        ]
                     }
+
             ]
         }
         closure = { entryName ->
@@ -53,9 +64,9 @@ abstract class SyntaxScript extends Script {
                     count: { expr ->
                         {
 
-                            [eq: { value ->
+                            [eq   : { value ->
 
-                                this.model.createCounter(entryName,expr,'==',(String)value)
+                                this.model.createCounter(entryName, expr, '==', (String) value)
                                 [
                                         and: { n ->
                                             this.model.pushStateConnector("&&")
@@ -63,9 +74,9 @@ abstract class SyntaxScript extends Script {
                                         },
                                         set: closureSet,
                                 ]
-                            },dif: { value ->
+                            }, dif: { value ->
 
-                                this.model.createCounter(entryName,expr,'!=',(String)value)
+                                this.model.createCounter(entryName, expr, '!=', (String) value)
                                 [
                                         and: { n ->
                                             this.model.pushStateConnector("&&")
