@@ -40,6 +40,7 @@
       </concept>
       <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1140017977771" name="readOnly" index="1Intyy" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -360,12 +361,6 @@
           </node>
         </node>
       </node>
-      <node concept="3F0ifn" id="L1htGZlYzj" role="3EZMnx">
-        <property role="3F0ifm" value="IS" />
-      </node>
-      <node concept="3F0A7n" id="L1htGZlYcr" role="3EZMnx">
-        <ref role="1NtTu8" to="wkfv:D0BVBe69HB" resolve="value" />
-      </node>
     </node>
   </node>
   <node concept="24kQdi" id="2mkDJ8VRIUH">
@@ -386,7 +381,7 @@
   </node>
   <node concept="24kQdi" id="QyYUbfuc4">
     <property role="3GE5qa" value="transition" />
-    <ref role="1XX52x" to="wkfv:D0BVBedzQp" resolve="Transition" />
+    <ref role="1XX52x" to="wkfv:D0BVBedzQp" resolve="ComparisonTransition" />
     <node concept="3EZMnI" id="QyYUbggh2" role="2wV5jI">
       <node concept="l2Vlx" id="QyYUbggh3" role="2iSdaV" />
       <node concept="3F0ifn" id="QyYUbggh4" role="3EZMnx">
@@ -433,14 +428,20 @@
   </node>
   <node concept="24kQdi" id="QyYUbfMIF">
     <property role="3GE5qa" value="transition" />
-    <ref role="1XX52x" to="wkfv:QyYUbdPuB" resolve="SensorHighLowAction" />
+    <ref role="1XX52x" to="wkfv:QyYUbdPuB" resolve="ActuatorHighLowAction" />
     <node concept="3EZMnI" id="QyYUbfMIH" role="2wV5jI">
       <node concept="l2Vlx" id="QyYUbfMII" role="2iSdaV" />
-      <node concept="3F1sOY" id="1nrhOXoyChP" role="3EZMnx">
-        <ref role="1NtTu8" to="wkfv:1nrhOXoyBCV" resolve="sensor" />
+      <node concept="1iCGBv" id="1GDYzTBpn3K" role="3EZMnx">
+        <ref role="1NtTu8" to="wkfv:2mkDJ8VR8SA" resolve="actuator" />
+        <node concept="1sVBvm" id="1GDYzTBpn3M" role="1sWHZn">
+          <node concept="3F0A7n" id="1GDYzTBpn6O" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
       </node>
       <node concept="3F0ifn" id="QyYUbfMIR" role="3EZMnx">
-        <property role="3F0ifm" value=" IS " />
+        <property role="3F0ifm" value=" =" />
         <node concept="11L4FC" id="QyYUbfMIS" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -452,7 +453,7 @@
         </node>
       </node>
       <node concept="3F0A7n" id="QyYUbfMIY" role="3EZMnx">
-        <ref role="1NtTu8" to="wkfv:QyYUbdPuC" resolve="value" />
+        <ref role="1NtTu8" to="wkfv:D0BVBe69HB" resolve="value" />
       </node>
     </node>
   </node>
@@ -520,6 +521,62 @@
       </node>
       <node concept="3F0A7n" id="23vinNFq65V" role="3EZMnx">
         <ref role="1NtTu8" to="wkfv:23vinNFq5sj" resolve="value" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="23vinNFrECP">
+    <property role="3GE5qa" value="transition" />
+    <ref role="1XX52x" to="wkfv:23vinNFrupp" resolve="BuzzerAction" />
+    <node concept="3EZMnI" id="23vinNFrEF9" role="2wV5jI">
+      <node concept="l2Vlx" id="23vinNFrEFa" role="2iSdaV" />
+      <node concept="1iCGBv" id="1GDYzTBpFxD" role="3EZMnx">
+        <ref role="1NtTu8" to="wkfv:2mkDJ8VR8SA" resolve="actuator" />
+        <node concept="1sVBvm" id="1GDYzTBpFxF" role="1sWHZn">
+          <node concept="3F0A7n" id="1GDYzTBpF_4" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="23vinNFrEFg" role="3EZMnx">
+        <property role="3F0ifm" value="NOTE" />
+      </node>
+      <node concept="3F0A7n" id="23vinNFrEFj" role="3EZMnx">
+        <ref role="1NtTu8" to="wkfv:23vinNFruD4" resolve="note" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1GDYzTBob3t">
+    <property role="3GE5qa" value="transition" />
+    <ref role="1XX52x" to="wkfv:23vinNFru3B" resolve="Action" />
+    <node concept="3EZMnI" id="1GDYzTBob3v" role="2wV5jI">
+      <node concept="l2Vlx" id="1GDYzTBob3w" role="2iSdaV" />
+      <node concept="1iCGBv" id="1GDYzTBob3z" role="3EZMnx">
+        <ref role="1NtTu8" to="wkfv:2mkDJ8VR8SA" resolve="actuator" />
+        <node concept="1sVBvm" id="1GDYzTBob3A" role="1sWHZn">
+          <node concept="3F0A7n" id="1GDYzTBob3C" role="2wV5jI">
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1GDYzTBt56s">
+    <property role="3GE5qa" value="transition" />
+    <ref role="1XX52x" to="wkfv:6JwL40XjIMA" resolve="DelayTransition" />
+    <node concept="3EZMnI" id="1GDYzTBt57d" role="2wV5jI">
+      <node concept="l2Vlx" id="1GDYzTBt57e" role="2iSdaV" />
+      <node concept="3F0ifn" id="1GDYzTBt57f" role="3EZMnx">
+        <property role="3F0ifm" value="WAIT FOR" />
+      </node>
+      <node concept="3F0A7n" id="1GDYzTBt58A" role="3EZMnx">
+        <ref role="1NtTu8" to="wkfv:6JwL40XjJ1h" resolve="delay" />
+      </node>
+      <node concept="3F0ifn" id="1GDYzTBt596" role="3EZMnx">
+        <property role="3F0ifm" value="AND GO TO" />
+      </node>
+      <node concept="3F1sOY" id="1GDYzTBt57h" role="3EZMnx">
+        <ref role="1NtTu8" to="wkfv:D0BVBedWKT" resolve="nextState" />
       </node>
     </node>
   </node>

@@ -2,68 +2,38 @@
 #include <arduino.h> 
 
 //######### CAPTOR DECLARATION ############
-int D = 3;
-int F = 4;
+int B = 1;
 
 //######### ACTUATOR DECLARATION ##########
-int A = 15;
-int C = 2;
+int A = 2;
 
 //######### STEPS DECALARATION ############
-void S_void S_START() {
-  while(1) {
-        digitalWrite(3, HIGH);
-    if (digitalRead(0, null) && digitalRead(0, null)) {
-      break;
-    }
-    if (digitalRead(0, null)) {
-      break;
-    }
-      }
-S_START();
-};
-
-();
+void S_START();
 void S_END();
-void S_2();
 
 //######### STEPS DEFINITION ##############
 void S_START() {
   while(1) {
-        digitalWrite(3, HIGH);
-    if (digitalRead(0, null) && digitalRead(0, null)) {
-      break;
-    }
-    if (digitalRead(0, null)) {
-      break;
+    digitalWrite(1, HIGH);
+    if (digitalRead(2) == HIGH) {
+      S_END();break;
     }
       }
-S_START();
 };
 
 void S_END() {
   while(1) {
-        digitalWrite(3, HIGH);
-      }
-S_END();
-};
+    tone(1, 100, 200);
+    delay(10);
 
-void S_2() {
-  while(1) {
-        digitalWrite(3, HIGH);
-    if (digitalRead(0, null)) {
-      break;
-    }
-      }
-S_2();
+S_END();
+  }
 };
 
 
 void setup() {
-  pinMode(D, OUTPUT);
-pinMode(F, OUTPUT);
+  pinMode(B, OUTPUT);
   pinMode(A, INPUT);
-pinMode(C, INPUT);
 }
 void loop() {
   S_START();  return 0;

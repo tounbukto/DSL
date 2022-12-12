@@ -25,6 +25,7 @@
       </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
+        <property id="4628067390765956802" name="abstract" index="R5$K7" />
         <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
@@ -130,24 +131,19 @@
     <property role="TrG5h" value="State" />
     <property role="EcuMT" value="7120005094624090266" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="73XZ21rxeOs" role="1TKVEl">
-      <property role="IQ2nx" value="8141940917260315932" />
-      <property role="TrG5h" value="initial" />
-      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
-    </node>
     <node concept="1TJgyj" id="6JwL40Xi9dj" role="1TKVEi">
       <property role="IQ2ns" value="7773428737026593619" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="actuatorState" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="2mkDJ8VR8S_" resolve="ActuatorReference" />
+      <ref role="20lvS9" node="23vinNFru3B" resolve="Action" />
     </node>
     <node concept="1TJgyj" id="1IRuOJOdb7f" role="1TKVEi">
       <property role="IQ2ns" value="1997200525911962063" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="transitions" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="D0BVBedzQp" resolve="Transition" />
+      <ref role="20lvS9" node="1GDYzTBpZA$" resolve="Transition" />
     </node>
   </node>
   <node concept="25R3W" id="6bflI$02E$4">
@@ -212,9 +208,9 @@
   </node>
   <node concept="1TIwiD" id="6JwL40XjIMA">
     <property role="EcuMT" value="7773428737027009702" />
-    <property role="TrG5h" value="ActionDelay" />
+    <property role="TrG5h" value="DelayTransition" />
     <property role="3GE5qa" value="transition" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="1GDYzTBpZA$" resolve="Transition" />
     <node concept="1TJgyi" id="6JwL40XjJ1h" role="1TKVEl">
       <property role="IQ2nx" value="7773428737027010641" />
       <property role="TrG5h" value="delay" />
@@ -252,6 +248,7 @@
     <property role="EcuMT" value="2707972835273117221" />
     <property role="TrG5h" value="ActuatorReference" />
     <property role="3GE5qa" value="" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2mkDJ8VR8SA" role="1TKVEi">
       <property role="20lbJX" value="fLJekj4/1" />
       <property role="IQ2ns" value="2707972835273117222" />
@@ -301,9 +298,9 @@
   </node>
   <node concept="1TIwiD" id="D0BVBedzQp">
     <property role="EcuMT" value="738765959266188697" />
-    <property role="TrG5h" value="Transition" />
+    <property role="TrG5h" value="ComparisonTransition" />
     <property role="3GE5qa" value="transition" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" node="1GDYzTBpZA$" resolve="Transition" />
     <node concept="1TJgyj" id="QyYUbdQtr" role="1TKVEi">
       <property role="IQ2ns" value="15353505396516699" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -311,31 +308,12 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="23vinNFq5cQ" resolve="SensorHighLowComparison" />
     </node>
-    <node concept="1TJgyj" id="D0BVBedWKT" role="1TKVEi">
-      <property role="IQ2ns" value="738765959266290745" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="nextState" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="7SM15sN0oVJ" resolve="StateReference" />
-    </node>
   </node>
   <node concept="1TIwiD" id="QyYUbdPuB">
     <property role="EcuMT" value="15353505396512679" />
-    <property role="TrG5h" value="SensorHighLowAction" />
+    <property role="TrG5h" value="ActuatorHighLowAction" />
     <property role="3GE5qa" value="transition" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="QyYUbdPuC" role="1TKVEl">
-      <property role="IQ2nx" value="15353505396512680" />
-      <property role="TrG5h" value="value" />
-      <ref role="AX2Wp" node="D0BVBea_jj" resolve="LEDValue" />
-    </node>
-    <node concept="1TJgyj" id="1nrhOXoyBCV" role="1TKVEi">
-      <property role="IQ2ns" value="1574930900809579067" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="sensor" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="QyYUbgLKk" resolve="SensorReference" />
-    </node>
+    <ref role="1TJDcQ" node="23vinNFru3B" resolve="Action" />
   </node>
   <node concept="1TIwiD" id="6bflI$02Daa">
     <property role="EcuMT" value="7120005094624105098" />
@@ -395,6 +373,38 @@
       <property role="IQ2nx" value="2368692729894426387" />
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" node="D0BVBea_jj" resolve="LEDValue" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="23vinNFru3B">
+    <property role="EcuMT" value="2368692729894789351" />
+    <property role="3GE5qa" value="transition" />
+    <property role="TrG5h" value="Action" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" node="2mkDJ8VR8S_" resolve="ActuatorReference" />
+  </node>
+  <node concept="1TIwiD" id="23vinNFrupp">
+    <property role="EcuMT" value="2368692729894790745" />
+    <property role="3GE5qa" value="transition" />
+    <property role="TrG5h" value="BuzzerAction" />
+    <ref role="1TJDcQ" node="23vinNFru3B" resolve="Action" />
+    <node concept="1TJgyi" id="23vinNFruD4" role="1TKVEl">
+      <property role="IQ2nx" value="2368692729894791748" />
+      <property role="TrG5h" value="note" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1GDYzTBpZA$">
+    <property role="EcuMT" value="1957370658998974884" />
+    <property role="3GE5qa" value="transition" />
+    <property role="TrG5h" value="Transition" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="D0BVBedWKT" role="1TKVEi">
+      <property role="IQ2ns" value="738765959266290745" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="nextState" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7SM15sN0oVJ" resolve="StateReference" />
     </node>
   </node>
 </model>
