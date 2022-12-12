@@ -142,7 +142,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return LINKS.actuatorState$R3Zy;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.ActuatorReference$mX;
+      return CONCEPTS.Action$er;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -246,7 +246,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return LINKS.transitions$pO5x;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.Transition$qx;
+      return CONCEPTS.Transition$Ik;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -312,7 +312,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept ActuatorReference$mX = MetaAdapterFactory.getConcept(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdc8e25L, "NewLanguage.structure.ActuatorReference");
-    /*package*/ static final SConcept Transition$qx = MetaAdapterFactory.getConcept(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0xa409fb9ce363d99L, "NewLanguage.structure.Transition");
+    /*package*/ static final SConcept Action$er = MetaAdapterFactory.getConcept(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x20df497ceb6de0e7L, "NewLanguage.structure.Action");
+    /*package*/ static final SConcept Transition$Ik = MetaAdapterFactory.getConcept(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x1b29fa3e6767f9a4L, "NewLanguage.structure.Transition");
   }
 }

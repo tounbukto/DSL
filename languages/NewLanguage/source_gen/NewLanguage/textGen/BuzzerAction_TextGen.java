@@ -7,9 +7,9 @@ import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public class BuzzerAction_TextGen extends TextGenDescriptorBase {
@@ -17,14 +17,13 @@ public class BuzzerAction_TextGen extends TextGenDescriptorBase {
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.append("tone(");
-    tgs.append(String.valueOf(SPropertyOperations.getInteger(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.buzzer$FLQO), LINKS.actuator$Wiwi), LINKS.actuator$Ya2m), PROPS.broche$_91N)));
+    tgs.append(String.valueOf(SPropertyOperations.getInteger(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.actuator$Wiwi), LINKS.actuator$Ya2m), PROPS.broche$_91N)));
     tgs.append(", ");
     tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.note$PyQj)));
-    tgs.append(", 200)");
+    tgs.append(", 200);\n");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink buzzer$FLQO = MetaAdapterFactory.getContainmentLink(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x20df497ceb6de659L, 0x20df497ceb726b40L, "buzzer");
     /*package*/ static final SReferenceLink actuator$Wiwi = MetaAdapterFactory.getReferenceLink(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdc8e25L, 0x2594a6f23bdc8e26L, "actuator");
     /*package*/ static final SContainmentLink actuator$Ya2m = MetaAdapterFactory.getContainmentLink(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdeef5dL, 0x368bee8b291599L, "actuator");
   }

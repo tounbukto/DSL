@@ -10,7 +10,6 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Action;
-  private ConceptPresentation props_ActionDelay;
   private ConceptPresentation props_Actuator;
   private ConceptPresentation props_ActuatorDeclaration;
   private ConceptPresentation props_ActuatorHighLowAction;
@@ -19,6 +18,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Application;
   private ConceptPresentation props_Brick;
   private ConceptPresentation props_BuzzerAction;
+  private ConceptPresentation props_ComparisonTransition;
+  private ConceptPresentation props_DelayTransition;
   private ConceptPresentation props_Sensor;
   private ConceptPresentation props_SensorComparison;
   private ConceptPresentation props_SensorDeclaration;
@@ -40,13 +41,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Action = cpb.create();
         }
         return props_Action;
-      case LanguageConceptSwitch.ActionDelay:
-        if (props_ActionDelay == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("ActionDelay");
-          props_ActionDelay = cpb.create();
-        }
-        return props_ActionDelay;
       case LanguageConceptSwitch.Actuator:
         if (props_Actuator == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -64,7 +58,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.ActuatorHighLowAction:
         if (props_ActuatorHighLowAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("ActuatorHighLowAction");
+          cpb.presentationByReference(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdc8e25L, 0x2594a6f23bdc8e26L, "actuator", "", "");
           props_ActuatorHighLowAction = cpb.create();
         }
         return props_ActuatorHighLowAction;
@@ -99,10 +93,24 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.BuzzerAction:
         if (props_BuzzerAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("BuzzerAction");
+          cpb.presentationByReference(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdc8e25L, 0x2594a6f23bdc8e26L, "actuator", "", "");
           props_BuzzerAction = cpb.create();
         }
         return props_BuzzerAction;
+      case LanguageConceptSwitch.ComparisonTransition:
+        if (props_ComparisonTransition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ComparisonTransition");
+          props_ComparisonTransition = cpb.create();
+        }
+        return props_ComparisonTransition;
+      case LanguageConceptSwitch.DelayTransition:
+        if (props_DelayTransition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("DelayTransition");
+          props_DelayTransition = cpb.create();
+        }
+        return props_DelayTransition;
       case LanguageConceptSwitch.Sensor:
         if (props_Sensor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -162,7 +170,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Transition:
         if (props_Transition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Transition");
           props_Transition = cpb.create();
         }
         return props_Transition;
