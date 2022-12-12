@@ -25,20 +25,24 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
   @Override
   public TextGenDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
     switch (myIndex.index(concept)) {
+      case LanguageConceptSwitch.ActionDelay:
+        return new ActionDelay_TextGen();
+      case LanguageConceptSwitch.ActuatorReference:
+        return new ActuatorReference_TextGen();
       case LanguageConceptSwitch.ActuatorState:
         return new ActuatorState_TextGen();
       case LanguageConceptSwitch.Application:
         return new Application_TextGen();
-      case LanguageConceptSwitch.BuzzerTone:
-        return new BuzzerTone_TextGen();
-      case LanguageConceptSwitch.SensorComparisonTransaction:
-        return new SensorComparisonTransaction_TextGen();
-      case LanguageConceptSwitch.State:
-        return new State_TextGen();
-      case LanguageConceptSwitch.Transaction:
-        return new Transaction_TextGen();
-      case LanguageConceptSwitch.TransitionDelay:
-        return new TransitionDelay_TextGen();
+      case LanguageConceptSwitch.SensorComparison:
+        return new SensorComparison_TextGen();
+      case LanguageConceptSwitch.SensorHighLowAction:
+        return new SensorHighLowAction_TextGen();
+      case LanguageConceptSwitch.SensorHighLowComparison:
+        return new SensorHighLowComparison_TextGen();
+      case LanguageConceptSwitch.StateDeclaration:
+        return new StateDeclaration_TextGen();
+      case LanguageConceptSwitch.Transition:
+        return new Transition_TextGen();
     }
     return null;
   }

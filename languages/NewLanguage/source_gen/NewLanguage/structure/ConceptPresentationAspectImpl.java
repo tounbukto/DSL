@@ -9,48 +9,61 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
-  private ConceptPresentation props_AbstractAtuatorState;
-  private ConceptPresentation props_AbstractTransaction;
-  private ConceptPresentation props_Actionneur;
+  private ConceptPresentation props_ActionDelay;
+  private ConceptPresentation props_Actuator;
+  private ConceptPresentation props_ActuatorDeclaration;
+  private ConceptPresentation props_ActuatorReference;
   private ConceptPresentation props_ActuatorState;
   private ConceptPresentation props_Application;
-  private ConceptPresentation props_BaseTransaction;
   private ConceptPresentation props_Brick;
-  private ConceptPresentation props_BuzzerTone;
-  private ConceptPresentation props_Capteur;
-  private ConceptPresentation props_SensorComparisonTransaction;
+  private ConceptPresentation props_Sensor;
+  private ConceptPresentation props_SensorComparison;
+  private ConceptPresentation props_SensorDeclaration;
+  private ConceptPresentation props_SensorHighLowAction;
+  private ConceptPresentation props_SensorHighLowComparison;
+  private ConceptPresentation props_SensorReference;
   private ConceptPresentation props_State;
-  private ConceptPresentation props_Transaction;
-  private ConceptPresentation props_TransitionDelay;
+  private ConceptPresentation props_StateDeclaration;
+  private ConceptPresentation props_StateReference;
+  private ConceptPresentation props_Transition;
 
   @Override
   @Nullable
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
-      case LanguageConceptSwitch.AbstractAtuatorState:
-        if (props_AbstractAtuatorState == null) {
+      case LanguageConceptSwitch.ActionDelay:
+        if (props_ActionDelay == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_AbstractAtuatorState = cpb.create();
+          cpb.rawPresentation("ActionDelay");
+          props_ActionDelay = cpb.create();
         }
-        return props_AbstractAtuatorState;
-      case LanguageConceptSwitch.AbstractTransaction:
-        if (props_AbstractTransaction == null) {
+        return props_ActionDelay;
+      case LanguageConceptSwitch.Actuator:
+        if (props_Actuator == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_AbstractTransaction = cpb.create();
+          cpb.presentationByName();
+          props_Actuator = cpb.create();
         }
-        return props_AbstractTransaction;
-      case LanguageConceptSwitch.Actionneur:
-        if (props_Actionneur == null) {
+        return props_Actuator;
+      case LanguageConceptSwitch.ActuatorDeclaration:
+        if (props_ActuatorDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Actionneur");
-          props_Actionneur = cpb.create();
+          cpb.presentationByName();
+          props_ActuatorDeclaration = cpb.create();
         }
-        return props_Actionneur;
+        return props_ActuatorDeclaration;
+      case LanguageConceptSwitch.ActuatorReference:
+        if (props_ActuatorReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdc8e25L, 0x2594a6f23bdc8e26L, "actuator", "", "");
+          props_ActuatorReference = cpb.create();
+        }
+        return props_ActuatorReference;
       case LanguageConceptSwitch.ActuatorState:
         if (props_ActuatorState == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x6be0c4403d48a0e3L, 0x6be0c4403d48a48eL, "actuator", "", "");
+          cpb.rawPresentation("ActuatorState");
           props_ActuatorState = cpb.create();
         }
         return props_ActuatorState;
@@ -61,41 +74,55 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Application = cpb.create();
         }
         return props_Application;
-      case LanguageConceptSwitch.BaseTransaction:
-        if (props_BaseTransaction == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("BaseTransaction");
-          props_BaseTransaction = cpb.create();
-        }
-        return props_BaseTransaction;
       case LanguageConceptSwitch.Brick:
         if (props_Brick == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Brick");
+          cpb.presentationByName();
           props_Brick = cpb.create();
         }
         return props_Brick;
-      case LanguageConceptSwitch.BuzzerTone:
-        if (props_BuzzerTone == null) {
+      case LanguageConceptSwitch.Sensor:
+        if (props_Sensor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("BuzzerTone");
-          props_BuzzerTone = cpb.create();
+          cpb.presentationByName();
+          props_Sensor = cpb.create();
         }
-        return props_BuzzerTone;
-      case LanguageConceptSwitch.Capteur:
-        if (props_Capteur == null) {
+        return props_Sensor;
+      case LanguageConceptSwitch.SensorComparison:
+        if (props_SensorComparison == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Capteur");
-          props_Capteur = cpb.create();
+          cpb.rawPresentation("SensorComparison");
+          props_SensorComparison = cpb.create();
         }
-        return props_Capteur;
-      case LanguageConceptSwitch.SensorComparisonTransaction:
-        if (props_SensorComparisonTransaction == null) {
+        return props_SensorComparison;
+      case LanguageConceptSwitch.SensorDeclaration:
+        if (props_SensorDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000a928aL, 0x62cf56e9000ab5dfL, "sensor", "", "");
-          props_SensorComparisonTransaction = cpb.create();
+          cpb.presentationByName();
+          props_SensorDeclaration = cpb.create();
         }
-        return props_SensorComparisonTransaction;
+        return props_SensorDeclaration;
+      case LanguageConceptSwitch.SensorHighLowAction:
+        if (props_SensorHighLowAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SensorHighLowAction");
+          props_SensorHighLowAction = cpb.create();
+        }
+        return props_SensorHighLowAction;
+      case LanguageConceptSwitch.SensorHighLowComparison:
+        if (props_SensorHighLowComparison == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SensorHighLowComparison");
+          props_SensorHighLowComparison = cpb.create();
+        }
+        return props_SensorHighLowComparison;
+      case LanguageConceptSwitch.SensorReference:
+        if (props_SensorReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x368bee8b431c14L, 0x368bee8b43211aL, "target", "", "");
+          props_SensorReference = cpb.create();
+        }
+        return props_SensorReference;
       case LanguageConceptSwitch.State:
         if (props_State == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -103,20 +130,27 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_State = cpb.create();
         }
         return props_State;
-      case LanguageConceptSwitch.Transaction:
-        if (props_Transaction == null) {
+      case LanguageConceptSwitch.StateDeclaration:
+        if (props_StateDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Transaction");
-          props_Transaction = cpb.create();
+          cpb.presentationByName();
+          props_StateDeclaration = cpb.create();
         }
-        return props_Transaction;
-      case LanguageConceptSwitch.TransitionDelay:
-        if (props_TransitionDelay == null) {
+        return props_StateDeclaration;
+      case LanguageConceptSwitch.StateReference:
+        if (props_StateReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("TransitionDelay");
-          props_TransitionDelay = cpb.create();
+          cpb.presentationByReference(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x7e32045733018eefL, 0x1bb77b4bf4340176L, "target", "", "");
+          props_StateReference = cpb.create();
         }
-        return props_TransitionDelay;
+        return props_StateReference;
+      case LanguageConceptSwitch.Transition:
+        if (props_Transition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Transition");
+          props_Transition = cpb.create();
+        }
+        return props_Transition;
     }
     return null;
   }

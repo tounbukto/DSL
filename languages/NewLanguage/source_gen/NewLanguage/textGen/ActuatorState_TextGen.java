@@ -7,8 +7,9 @@ import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public class ActuatorState_TextGen extends TextGenDescriptorBase {
@@ -17,18 +18,20 @@ public class ActuatorState_TextGen extends TextGenDescriptorBase {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.indent();
     tgs.append("digitalWrite(");
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.actuator$wrgP), PROPS.name$qsqd));
+    tgs.append("" + SPropertyOperations.getInteger(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.brick$1yyj), LINKS.actuator$Wiwi), LINKS.actuator$Ya2m), PROPS.broche$_91N));
     tgs.append(", ");
-    tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.currentState$XGh0));
+    tgs.append("" + SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.value$6FS_));
     tgs.append(");\n");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink actuator$wrgP = MetaAdapterFactory.getReferenceLink(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x6be0c4403d48a0e3L, 0x6be0c4403d48a48eL, "actuator");
+    /*package*/ static final SContainmentLink brick$1yyj = MetaAdapterFactory.getContainmentLink(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x6be0c4403d48a0e3L, 0x266ec660d8ba11a3L, "brick");
+    /*package*/ static final SReferenceLink actuator$Wiwi = MetaAdapterFactory.getReferenceLink(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdc8e25L, 0x2594a6f23bdc8e26L, "actuator");
+    /*package*/ static final SContainmentLink actuator$Ya2m = MetaAdapterFactory.getContainmentLink(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x2594a6f23bdeef5dL, 0x368bee8b291599L, "actuator");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$qsqd = MetaAdapterFactory.getProperty(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000abf07L, 0x62cf56e9000abfbeL, "name");
-    /*package*/ static final SProperty currentState$XGh0 = MetaAdapterFactory.getProperty(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x6be0c4403d48a0e3L, 0x6be0c4403d48a1ceL, "currentState");
+    /*package*/ static final SProperty broche$_91N = MetaAdapterFactory.getProperty(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x62cf56e9000abf07L, 0x62cf56e9000ac0f8L, "broche");
+    /*package*/ static final SProperty value$6FS_ = MetaAdapterFactory.getProperty(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL, 0x6be0c4403d48a0e3L, 0x266ec660d8ba170aL, "value");
   }
 }

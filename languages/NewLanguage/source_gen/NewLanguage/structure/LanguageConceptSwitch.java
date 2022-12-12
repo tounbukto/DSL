@@ -9,35 +9,43 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int AbstractAtuatorState = 0;
-  public static final int AbstractTransaction = 1;
-  public static final int Actionneur = 2;
-  public static final int ActuatorState = 3;
-  public static final int Application = 4;
-  public static final int BaseTransaction = 5;
+  public static final int ActionDelay = 0;
+  public static final int Actuator = 1;
+  public static final int ActuatorDeclaration = 2;
+  public static final int ActuatorReference = 3;
+  public static final int ActuatorState = 4;
+  public static final int Application = 5;
   public static final int Brick = 6;
-  public static final int BuzzerTone = 7;
-  public static final int Capteur = 8;
-  public static final int SensorComparisonTransaction = 9;
-  public static final int State = 10;
-  public static final int Transaction = 11;
-  public static final int TransitionDelay = 12;
+  public static final int Sensor = 7;
+  public static final int SensorComparison = 8;
+  public static final int SensorDeclaration = 9;
+  public static final int SensorHighLowAction = 10;
+  public static final int SensorHighLowComparison = 11;
+  public static final int SensorReference = 12;
+  public static final int State = 13;
+  public static final int StateDeclaration = 14;
+  public static final int StateReference = 15;
+  public static final int Transition = 16;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x3129c9e0bc3c4036L, 0x815e27f12b196e5eL);
-    builder.put(0x75183f7f14ce5540L, AbstractAtuatorState);
-    builder.put(0x75183f7f14cab783L, AbstractTransaction);
-    builder.put(0x62cf56e9000a49e3L, Actionneur);
+    builder.put(0x6be0c4403d4eeca6L, ActionDelay);
+    builder.put(0x62cf56e9000a49e3L, Actuator);
+    builder.put(0x2594a6f23bdeef5dL, ActuatorDeclaration);
+    builder.put(0x2594a6f23bdc8e25L, ActuatorReference);
     builder.put(0x6be0c4403d48a0e3L, ActuatorState);
     builder.put(0x62cf56e9000877d9L, Application);
-    builder.put(0x6be0c4403d502098L, BaseTransaction);
     builder.put(0x62cf56e9000abf07L, Brick);
-    builder.put(0x75183f7f14ce5b5aL, BuzzerTone);
-    builder.put(0x62cf56e9000a270bL, Capteur);
-    builder.put(0x62cf56e9000a928aL, SensorComparisonTransaction);
+    builder.put(0x62cf56e9000a270bL, Sensor);
+    builder.put(0x62cf56e9000a928aL, SensorComparison);
+    builder.put(0x368bee8b43167aL, SensorDeclaration);
+    builder.put(0x368bee8b3757a7L, SensorHighLowAction);
+    builder.put(0x20df497ceb685336L, SensorHighLowComparison);
+    builder.put(0x368bee8b431c14L, SensorReference);
     builder.put(0x62cf56e9000a589aL, State);
-    builder.put(0x62cf56e9000a8d0bL, Transaction);
-    builder.put(0x6be0c4403d4eeca6L, TransitionDelay);
+    builder.put(0x7e32045733018715L, StateDeclaration);
+    builder.put(0x7e32045733018eefL, StateReference);
+    builder.put(0xa409fb9ce363d99L, Transition);
     myIndex = builder.seal();
   }
 
