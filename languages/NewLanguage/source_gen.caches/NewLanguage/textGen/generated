@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-ew5qthacahouggt1hxmm8sqhclp2cmx">
-  <files names="ActuatorState_TextGen.java:Application_TextGen.java:BuzzerTone_TextGen.java:SensorComparisonTransaction_TextGen.java:State_TextGen.java:TextGenAspectDescriptor.java:Transaction_TextGen.java:TransitionDelay_TextGen.java" />
+<product version="3" modelHash="-8keem8bm1o9lqnk5rhkpccucewy1pan">
+  <files names="ActionDelay_TextGen.java:ActuatorReference_TextGen.java:ActuatorState_TextGen.java:Application_TextGen.java:SensorComparison_TextGen.java:SensorHighLowAction_TextGen.java:SensorHighLowComparison_TextGen.java:StateDeclaration_TextGen.java:TextGenAspectDescriptor.java:Transition_TextGen.java" />
 </product>
 
