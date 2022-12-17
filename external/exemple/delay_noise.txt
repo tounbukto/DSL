@@ -1,0 +1,26 @@
+APP delay_test  
+  SENSORS 
+    << ... >> 
+   
+  ACTUATORS 
+     buzzer ON PIN 10 
+    
+  START 
+    STATE start  
+      
+    ACTUATORS 
+      buzzer NOTE 111 
+     
+    TRANSITIONS 
+      WAIT FOR 10 AND GO TO state2 
+    
+  STATES 
+    STATE state2  
+        
+      ACTUATORS 
+        buzzer NOTE 132 
+       
+      TRANSITIONS 
+        WAIT FOR 2 AND GO TO start 
+     
+  

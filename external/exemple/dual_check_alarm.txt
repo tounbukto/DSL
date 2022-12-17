@@ -1,0 +1,35 @@
+APP dualcheckalarm  
+  SENSORS 
+     button1 DIGITAL ON PIN 9 
+     button2 DIGITAL ON PIN 10 
+   
+  ACTUATORS 
+     buzzer ON PIN 11 
+    
+  START 
+    STATE start  
+      
+    ACTUATORS 
+      buzzer =LOW 
+     
+    TRANSITIONS 
+      IF  
+          button1 == HIGH 
+          button2 == HIGH 
+       GO TO state2 
+    
+  STATES 
+    STATE state2  
+        
+      ACTUATORS 
+        buzzer =HIGH 
+       
+      TRANSITIONS 
+        IF  
+            button1 == LOW 
+         GO TO start 
+        IF  
+            button2 == LOW 
+         GO TO start 
+     
+  

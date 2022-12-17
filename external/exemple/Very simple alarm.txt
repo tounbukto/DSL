@@ -1,0 +1,55 @@
+APP senario1  
+  SENSORS 
+     button DIGITAL ON PIN 9 
+   
+  ACTUATORS 
+     led ON PIN 10 
+     buzzer ON PIN 11 
+    
+  START 
+    STATE start  
+      
+    ACTUATORS 
+      buzzer =LOW 
+      led =LOW 
+     
+    TRANSITIONS 
+      IF  
+          button == HIGH 
+       GO TO state2 
+    
+  STATES 
+    STATE state2  
+        
+      ACTUATORS 
+        buzzer =HIGH 
+        led =HIGH 
+       
+      TRANSITIONS 
+        IF  
+            button == LOW 
+         GO TO state3 
+     
+    STATE state3  
+        
+      ACTUATORS 
+        buzzer =HIGH 
+        led =HIGH 
+       
+      TRANSITIONS 
+        IF  
+            button == HIGH 
+         GO TO state4 
+     
+    STATE state4  
+        
+      ACTUATORS 
+        buzzer =LOW 
+        led =LOW 
+       
+      TRANSITIONS 
+        IF  
+            button == LOW 
+         GO TO start 
+     
+  
