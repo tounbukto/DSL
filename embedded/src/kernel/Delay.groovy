@@ -1,15 +1,15 @@
 package kernel
 
-class Delay extends Instruction implements Instantiater {
-    String nb;
+class Delay extends Instruction {
+    int ms
 
-    Delay(String nb) {
-        this.nb = nb
+    Delay(int nb) {
+        this.ms = nb
     }
 
 
     @Override
     String instantiate() {
-        return "\tdelay(${nb});"
+        return "\tdelay(${ms});"
     }
 }

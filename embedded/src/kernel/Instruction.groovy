@@ -1,4 +1,4 @@
 package kernel
 
-class Instruction {
+public abstract class Instruction implements Instantiater{
 }

@@ -3,13 +3,12 @@ package kernel
 class Counter extends Variable{
     static int id = 0
     String list
-    String name
-
     String expr
+
     Counter(String list,String expr) {
+        super("counter${id++}")
         this.list = list
         this.expr = expr
-        this.name = "counter${id++}"
     }
 
     String getName(){

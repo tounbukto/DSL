@@ -31,7 +31,7 @@ class EventBlock implements Instantiater {
     String instantiate() {
         String stateString = ""
         for (State state: this.states){
-            stateString += "${state.creator} ${state.operator} ${state.state}"
+            stateString += "${state.componentName} ${state.operator} ${state.state}"
             if (this.stateConnectors.size() != 0)
                 stateString += " ${this.stateConnectors.remove(0)} "
         }
@@ -39,7 +39,7 @@ class EventBlock implements Instantiater {
 //        "if(${states.inject "",{old,curr -> old +" "+ curr.instantiate()}}){\n" +
 //            "" +
 //                    "}"
-        return "\tif(${stateString}){${actions.inject "",{old,curr -> "\n\t"+curr.instantiate()+"\t"+old  }}\n\t}\n"
+       return "\tif(${stateString}){${actions.inject "",{old,curr -> "\n\t"+curr.instantiate()+"\t"+old  }}\n\t}\n"
 
     }
 

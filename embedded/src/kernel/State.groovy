@@ -3,7 +3,7 @@ package kernel
 class State implements Instantiater {
 
     String state
-    String creator
+    String componentName
     String operator
 
 
@@ -12,14 +12,14 @@ class State implements Instantiater {
         println "state "+state
         println "operator "+operator
         this.state = state
-        this.creator = creator
+        this.componentName = creator
         this.operator = operator
     }
     // create operator state
 
     @Override
     String instantiate() {
-        return "${this.creator} ${this.operator} ${this.state}"
+        return "${this.componentName} ${this.operator} ${this.state}"
     }
 
 }
